@@ -43,10 +43,6 @@ export class AccountManagerImp implements AccountManager {
         return Array.from(accountStorage.accounts.values())
     }
 }
-// export class accountStorage {
-//    static accounts =new Map<string, Account>();
-//
-// }
 
 
 
