@@ -4,6 +4,7 @@ import {GetAccountsQuery} from "./get-accounts.query";
 import {Account, AccountStatus} from "./account";
 import {AccountError} from "./account.error";
 import {NotificationService, NotificationServiceImp} from "./notification.service";
+import {accountStorage} from "./account.storage";
 export interface AccountManager {
     openAccount(command: OpenAccountCommand): Promise<Account>
 
@@ -42,10 +43,10 @@ export class AccountManagerImp implements AccountManager {
         return Array.from(accountStorage.accounts.values())
     }
 }
-export class accountStorage {
-   static accounts =new Map<string, Account>();
-
-}
+// export class accountStorage {
+//    static accounts =new Map<string, Account>();
+//
+// }
 
 
 
